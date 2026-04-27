@@ -1,0 +1,647 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #3a3b40;
+}
+
+.konteyner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.yuqori-qism {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.navigatsiya {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigatsiya-ro-yxati {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navigatsiya-ro-yxati a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navigatsiya-ro-yxati a:hover, .faol-havola {
+    color: #000;
+    font-weight: 600;
+}
+
+.faol-havola {
+    position: relative;
+}
+
+.faol-havola::after {
+    content: "";
+    position: absolute;
+    bottom: -8px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 15px; 
+    height: 2px; 
+    background-color: #3a3b40; 
+}
+
+.logotip h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+.asosiy-ekran {
+    background: url('Rectangle\ 1.svg') no-repeat center center/cover;
+    height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.asosiy-ekran::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 250px;
+    background: rgba(43, 196, 178, 0.7);
+}
+
+.asosiy-matn-qutisi {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.asosiy-sarlavha {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.asosiy-kichik-matn {
+    font-size: 18px;
+}
+
+.biz-haqimizda {
+    padding: 100px 0;
+    background-image: url('pattern.png'); 
+    background-repeat: repeat;
+    background-color: #fcfcfc;
+}
+
+.qism-sarlavhasi {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #3a3b40;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.biz-haqimizda-blok {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.biz-haqimizda-rasm {
+    flex: 0 0 550px;
+    z-index: 1;
+}
+
+.biz-haqimizda-rasm img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.biz-haqimizda-matn-konteyner {
+    flex: 1;
+    margin-left: -80px;
+    margin-top: 50px;
+    z-index: 2;
+    position: relative;
+}
+
+.biz-haqimizda-matn {
+    background: #ffffff;
+    padding: 45px 50px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.biz-haqimizda-matn p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #be8857;
+    margin: 0;
+}
+
+.tugma-joyi {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.oddiy-tugma {
+    background: #f4f4f4;
+    border: 1px solid #333;
+    color: #333;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.oddiy-tugma:hover {
+    background: #333;
+    color: #fff;
+}
+
+.xonalar {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.xonalar-sarlavha-qismi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.xonalar-sarlavha-qismi .oddiy-tugma {
+    position: absolute;
+    right: 0;
+}
+
+.xonalar-qatori {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.xona-karta {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.faol-karta {
+    border: 1px solid transparent;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.xona-rasm-qismi {
+    position: relative;
+}
+
+.xona-rasm-qismi img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.odam-soni {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #2bc4b2;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.xona-malumot {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.xona-nomi {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.xona-narxi {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.qulayliklar {
+    list-style: none;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+.qulayliklar li::before {
+    content: '✔';
+    color: #4caf50;
+    margin-left: -15px;
+    margin-right: 5px;
+}
+
+.yashil-tugma {
+    background: #4caf50;
+    color: #ffffff !important;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: inherit;
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+
+.yashil-havola {
+    color: #4caf50 !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: auto;
+}
+
+.oq-tugma-yashil-chegara {
+    background: transparent;
+    color: #4caf50;
+    border: 1px solid #4caf50;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    margin-top: auto;
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+
+.sharhlar {
+    background-color: #C29D6D;
+    background-image: url('sharh-naqsh.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.sharhlar-qutisi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sharh-markaz {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.sharh-strelka {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.sharh-strelka:hover {
+    opacity: 1;
+}
+
+.oq-matn {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    margin-left: 0 !important;
+}
+
+.sharh-avtor {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.sharh-chiziq {
+    width: 50px;
+    height: 1px;
+    background: #ffffff;
+    margin: 0 auto 20px auto;
+}
+
+.sharh-matn {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.yulduzlar {
+    color: #ffd700;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.sharh-sahifa {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.pastki-qism {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.pastki-havolalar {
+    flex: 1;
+    display: flex;
+    gap: 60px;
+}
+
+.havola-ustuni {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.havola-ustuni a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.qalin-havola {
+    font-weight: 700;
+    color: #333 !important;
+}
+
+.pastki-logotip-ijtimoiy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logotip-rasm {
+    width: 60px;
+    margin-bottom: 5px;
+}
+
+.footer-brend {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #3a3b40;
+    margin-bottom: 15px;
+}
+
+.ijtimoiy-tarmoqlar {
+    display: flex;
+    gap: 10px;
+}
+
+.doira-ikonka {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.doira-ikonka:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.pastki-aloqa {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.telefon-raqamlar p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.telefon-raqamlar p:last-child {
+    margin-bottom: 0;
+}
+.ichki-sahifa-banner {
+    background-image: url('Rectangle\ 1\ \(1\).svg');
+    background-size: cover;
+    background-position: center;
+    height: 380px; 
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center; 
+}
+
+.banner-qoraytirgich {
+    background: rgba(43, 196, 178, 0.8); 
+    width: 100%;
+    height: 180px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ichki-sarlavha {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 46px; 
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px; 
+}
+
+.sahifa-yo-li {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 15px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: nowrap; 
+}
+
+.sahifa-yo-li a, 
+.sahifa-yo-li a:visited {
+    color: #ffffff !important; 
+    text-decoration: none !important; 
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.sahifa-yo-li a:hover {
+    opacity: 0.8;
+}
+
+.sahifa-yo-li .strelcha {
+    font-size: 15px;
+    font-weight: 300; 
+    opacity: 0.6; 
+    margin: 0; 
+    padding: 0 10px; 
+    line-height: 1; 
+    display: flex;
+    align-items: center;
+}
+
+.kirish-matni-qismi {
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 40px 20px 60px 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px; 
+    line-height: 1.6; 
+    color: #333;
+}
+
+.kirish-matni-qismi p {
+    margin-bottom: 25px; 
+}
+
+.kirish-matni-qismi p:last-child {
+    margin-bottom: 0;
+}
+
+.xizmat-qatori {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 120px; 
+    width: 100%;
+}
+
+.xizmat-rasmi {
+    flex: 0 0 45%; 
+    height: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.xizmat-rasmi img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px; 
+}
+
+.xizmat-malumot {
+    flex: 1; 
+    z-index: 2;
+    position: relative;
+}
+
+.xizmat-malumot h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #111;
+    margin-bottom: 25px;
+    padding-left: 30px; 
+}
+
+.oq-quti {
+    background: #ffffff;
+    padding: 40px 50px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+    margin-left: -15%; 
+    border-radius: 4px;
+}
+
+.oq-quti p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.oq-quti p:last-child {
+    margin-bottom: 0;
+}
+
+.teskari-qator {
+    flex-direction: row-reverse;
+}
+
+.teskari-qator .xizmat-malumot h3 {
+    padding-left: 0;
+    padding-right: 30px; 
+}
+
+.teskari-qator .oq-quti {
+    margin-left: 0;
+    margin-right: -15%; 
+}
